@@ -2,6 +2,11 @@ name: Update Sleeper Draft State
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - draft_state.json
   schedule:
     - cron: '*/5 * * * *'
 
