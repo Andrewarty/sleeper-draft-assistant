@@ -1,0 +1,210 @@
+{
+  "draft_id": "1398821469525475328",
+  "draft_status": "paused",
+  "current_pick": 30,
+  "round": 3,
+  "draft_slot": 6,
+  "next_user_pick": 43,
+  "roster": [
+    {
+      "name": "Jaxon Smith-Njigba",
+      "pos": "WR",
+      "pick": 6
+    },
+    {
+      "name": "Kenneth Walker",
+      "pos": "RB",
+      "pick": 19
+    }
+  ],
+  "roster_counts": {
+    "WR": 1,
+    "RB": 1
+  },
+  "recommendation": {
+    "name": "Chris Olave",
+    "pos": "WR",
+    "team": "NO",
+    "rank": 18,
+    "ecr": 23,
+    "adp": 29.0,
+    "tier": 3,
+    "score": 19.75,
+    "adp_value": 1.0,
+    "return_risk": "almost certainly gone"
+  },
+  "next_best": [
+    {
+      "name": "Garrett Wilson",
+      "pos": "WR",
+      "team": "NYJ",
+      "rank": 20,
+      "ecr": 46,
+      "adp": 37.0,
+      "tier": 3,
+      "score": 29.1,
+      "adp_value": -7.0,
+      "return_risk": "unlikely to make it back"
+    },
+    {
+      "name": "DeVonta Smith",
+      "pos": "WR",
+      "team": "PHI",
+      "rank": 28,
+      "ecr": 32,
+      "adp": 44.0,
+      "tier": 3,
+      "score": 31.9,
+      "adp_value": -14.0,
+      "return_risk": "coin flip to return"
+    },
+    {
+      "name": "Colston Loveland",
+      "pos": "TE",
+      "team": "CHI",
+      "rank": 32,
+      "ecr": 37,
+      "adp": 46.0,
+      "tier": 4,
+      "score": 34.25,
+      "adp_value": -16.0,
+      "return_risk": "coin flip to return"
+    },
+    {
+      "name": "Ladd McConkey",
+      "pos": "WR",
+      "team": "LAC",
+      "rank": 29,
+      "ecr": 42,
+      "adp": 45.0,
+      "tier": 3,
+      "score": 36.05,
+      "adp_value": -15.0,
+      "return_risk": "coin flip to return"
+    }
+  ],
+  "top_10_available": [
+    {
+      "name": "Chris Olave",
+      "pos": "WR",
+      "team": "NO",
+      "rank": 18,
+      "ecr": 23,
+      "adp": 29.0,
+      "tier": 3,
+      "score": 19.75,
+      "adp_value": 1.0,
+      "return_risk": "almost certainly gone"
+    },
+    {
+      "name": "Garrett Wilson",
+      "pos": "WR",
+      "team": "NYJ",
+      "rank": 20,
+      "ecr": 46,
+      "adp": 37.0,
+      "tier": 3,
+      "score": 29.1,
+      "adp_value": -7.0,
+      "return_risk": "unlikely to make it back"
+    },
+    {
+      "name": "DeVonta Smith",
+      "pos": "WR",
+      "team": "PHI",
+      "rank": 28,
+      "ecr": 32,
+      "adp": 44.0,
+      "tier": 3,
+      "score": 31.9,
+      "adp_value": -14.0,
+      "return_risk": "coin flip to return"
+    },
+    {
+      "name": "Colston Loveland",
+      "pos": "TE",
+      "team": "CHI",
+      "rank": 32,
+      "ecr": 37,
+      "adp": 46.0,
+      "tier": 4,
+      "score": 34.25,
+      "adp_value": -16.0,
+      "return_risk": "coin flip to return"
+    },
+    {
+      "name": "Ladd McConkey",
+      "pos": "WR",
+      "team": "LAC",
+      "rank": 29,
+      "ecr": 42,
+      "adp": 45.0,
+      "tier": 3,
+      "score": 36.05,
+      "adp_value": -15.0,
+      "return_risk": "coin flip to return"
+    },
+    {
+      "name": "Lamar Jackson",
+      "pos": "QB",
+      "team": "BAL",
+      "rank": 30,
+      "ecr": 28,
+      "adp": 34.0,
+      "tier": 3,
+      "score": 36.3,
+      "adp_value": -4.0,
+      "return_risk": "unlikely to make it back"
+    },
+    {
+      "name": "Tee Higgins",
+      "pos": "WR",
+      "team": "CIN",
+      "rank": 35,
+      "ecr": 33,
+      "adp": 41.0,
+      "tier": 4,
+      "score": 36.8,
+      "adp_value": -11.0,
+      "return_risk": "coin flip to return"
+    },
+    {
+      "name": "Tetairoa McMillan",
+      "pos": "WR",
+      "team": "CAR",
+      "rank": 36,
+      "ecr": 39,
+      "adp": 38.0,
+      "tier": 4,
+      "score": 37.05,
+      "adp_value": -8.0,
+      "return_risk": "unlikely to make it back"
+    },
+    {
+      "name": "Josh Jacobs",
+      "pos": "RB",
+      "team": "GB",
+      "rank": 43,
+      "ecr": 36,
+      "adp": 27.0,
+      "tier": 4,
+      "score": 40.55,
+      "adp_value": 3.0,
+      "return_risk": "almost certainly gone"
+    },
+    {
+      "name": "Breece Hall",
+      "pos": "RB",
+      "team": "NYJ",
+      "rank": 41,
+      "ecr": 40,
+      "adp": 32.0,
+      "tier": 4,
+      "score": 40.65,
+      "adp_value": -2.0,
+      "return_risk": "almost certainly gone"
+    }
+  ],
+  "logic": "65% curated board + 35% ECR, then roster need, ADP value, QB timing and return-risk adjustments",
+  "board_size": 125
+}
