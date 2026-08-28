@@ -6,5 +6,6 @@
   "team_name": "Limp Dickers",
   "draft_slot": 6,
   "league_size": 12,
-  "format": "redraft"
+  "format": "redraft",
+  "refresh_nonce": 1
 }
