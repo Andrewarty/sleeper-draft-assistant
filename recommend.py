@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Create live fantasy draft recommendations from Sleeper state + master board."""
+"""Create live fantasy draft recommendations from Sleeper state + master board.
+
+Decision philosophy:
+- Our master board and its tiers are the authority.
+- ECR/ADP describe the market; they do not redefine player quality.
+- Roster construction, QB timing, tier cliffs and next-pick survival are
+  decision modifiers inside the board's tier structure.
+"""
 
 import csv
 import json
@@ -29,7 +36,7 @@ def tier_for(rank):
 
 
 def next_user_pick(current_pick, slot, teams):
-    # Find the next pick number belonging to this draft slot in a snake draft.
+    """Find the next pick after current_pick belonging to this slot in a snake."""
     for p in range(current_pick + 1, current_pick + teams * 3 + 1):
         rnd = (p - 1) // teams + 1
         within = (p - 1) % teams + 1
@@ -37,6 +44,37 @@ def next_user_pick(current_pick, slot, teams):
         if pick_slot == slot:
             return p
     return None
+
+
+def clamp(value, low, high):
+    return max(low, min(high, value))
+
+
+def survival_label(adp, current_pick, nxt):
+    if nxt is None:
+        return "unknown"
+    if adp <= current_pick + 3:
+        return "almost certainly gone"
+    if adp <= nxt - 3:
+        return "unlikely to make it back"
+    if adp <= nxt + 4:
+        return "coin flip to return"
+    return "good chance to return"
+
+
+def pick_window(rank, adp, current_pick, nxt, return_risk, board_gap):
+    """Translate board + market into a simple live-draft instruction."""
+    reach = adp - current_pick
+
+    if board_gap >= 8 and reach >= 12 and return_risk == "good chance to return":
+        return "AVOID AT PRICE"
+    if return_risk in {"almost certainly gone", "unlikely to make it back"}:
+        return "TAKE"
+    if return_risk == "coin flip to return":
+        return "DO NOT LET PAST TURN"
+    if nxt is not None and adp > nxt + 4:
+        return "CAN WAIT"
+    return "TAKE"
 
 
 def main():
@@ -69,71 +107,102 @@ def main():
     rnd = (current_pick - 1) // teams + 1
     nxt = next_user_pick(current_pick, slot, teams)
 
+    available_rows = [row for row in board if norm(row["name"]) not in drafted_names]
+    best_available_rank = min((int(row["rank"]) for row in available_rows), default=999)
+    best_available_tier = tier_for(best_available_rank)
+
     candidates = []
-    for row in board:
-        if norm(row["name"]) in drafted_names:
-            continue
+    for row in available_rows:
         rank = int(row["rank"])
         adp = float(row["adp"])
         ecr = int(row["ecr"])
         pos = row["pos"]
+        tier = tier_for(rank)
+        board_gap = rank - best_available_rank
 
-        # Lower score is better. Base blends our curated seed rank with ECR.
-        score = rank * 0.65 + ecr * 0.35
+        # MASTER BOARD IS THE BASELINE. Lower is better.
+        score = float(rank)
 
-        # Roster construction for standard 1QB / 2RB / 2WR / 1TE / flex PPR.
+        # Market/ECR is deliberately capped. It can break ties inside our tier,
+        # but cannot overpower what our board says about player quality.
+        ecr_modifier = clamp((ecr - rank) * 0.12, -2.0, 2.0)
+        score += ecr_modifier
+
+        # Roster fit is a nudge, not a license to jump tiers.
+        roster_modifier = 0.0
         if pos == "RB" and counts["RB"] == 0:
-            score -= 4.0
+            roster_modifier -= 1.5
         elif pos == "WR" and counts["WR"] == 0:
-            score -= 4.0
+            roster_modifier -= 1.5
         elif pos == "TE" and counts["TE"] == 0 and rank <= 35:
-            score -= 2.0
+            roster_modifier -= 1.0
+        elif pos == "TE" and counts["TE"] >= 1:
+            roster_modifier += 1.0
+        score += roster_modifier
 
-        # In 1QB, avoid forcing QB too early unless truly elite/value.
+        # 1QB discipline. Elite QBs can still win inside their board tier, but
+        # we do not let positional urgency manufacture an early QB reach.
+        qb_modifier = 0.0
         if pos == "QB":
             if counts["QB"] >= 1:
-                score += 18.0
+                qb_modifier += 5.0
             elif rnd <= 3 and rank > 25:
-                score += 7.0
+                qb_modifier += 2.5
             elif rnd <= 4 and rank > 40:
-                score += 5.0
+                qb_modifier += 2.0
+        score += qb_modifier
 
-        # Reward players who have fallen versus ADP; avoid extreme reaches.
-        value = current_pick - adp
-        if value >= 12:
-            score -= 4.0
-        elif value >= 6:
-            score -= 2.0
-        elif value <= -18:
-            score += 5.0
-        elif value <= -10:
-            score += 2.5
+        # ADP is market timing only. Reward falls / penalize reaches modestly.
+        adp_value = current_pick - adp
+        market_modifier = 0.0
+        if adp_value >= 12:
+            market_modifier -= 1.5
+        elif adp_value >= 6:
+            market_modifier -= 0.75
+        elif adp_value <= -18:
+            market_modifier += 1.5
+        elif adp_value <= -10:
+            market_modifier += 0.75
+        score += market_modifier
 
-        return_risk = "unknown"
-        if nxt is not None:
-            if adp <= current_pick + 3:
-                return_risk = "almost certainly gone"
-            elif adp <= nxt - 3:
-                return_risk = "unlikely to make it back"
-            elif adp <= nxt + 4:
-                return_risk = "coin flip to return"
-            else:
-                return_risk = "good chance to return"
+        return_risk = survival_label(adp, current_pick, nxt)
 
         candidates.append({
             "name": row["name"],
             "pos": pos,
             "team": row["team"],
+            "board_rank": rank,
             "rank": rank,
+            "market_ecr": ecr,
             "ecr": ecr,
             "adp": adp,
-            "tier": tier_for(rank),
+            "tier": tier,
+            "board_gap": board_gap,
             "score": round(score, 2),
-            "adp_value": round(value, 1),
+            "adp_value": round(adp_value, 1),
             "return_risk": return_risk,
+            "modifiers": {
+                "ecr": round(ecr_modifier, 2),
+                "roster_fit": round(roster_modifier, 2),
+                "qb_timing": round(qb_modifier, 2),
+                "market_value": round(market_modifier, 2),
+            },
         })
 
-    candidates.sort(key=lambda x: (x["score"], x["rank"]))
+    # Tier is an absolute guardrail: no lower-tier player can leapfrog a
+    # higher-tier player simply because ADP/ECR/roster modifiers like him.
+    candidates.sort(key=lambda x: (x["tier"], x["score"], x["board_rank"]))
+
+    # Add live pick-window labels after sorting so they are easy to consume.
+    for c in candidates:
+        c["pick_window"] = pick_window(
+            c["board_rank"], c["adp"], current_pick, nxt,
+            c["return_risk"], c["board_gap"]
+        )
+        c["tier_cliff"] = c["tier"] == best_available_tier and any(
+            other["tier"] > c["tier"] for other in candidates
+        )
+
     top = candidates[:10]
 
     result = {
@@ -145,10 +214,12 @@ def main():
         "next_user_pick": nxt,
         "roster": roster,
         "roster_counts": dict(counts),
+        "best_available_board_rank": best_available_rank if best_available_rank != 999 else None,
+        "best_available_tier": best_available_tier if best_available_rank != 999 else None,
         "recommendation": top[0] if top else None,
         "next_best": top[1:5],
         "top_10_available": top,
-        "logic": "65% curated board + 35% ECR, then roster need, ADP value, QB timing and return-risk adjustments",
+        "logic": "Master board + tiers are authoritative; capped ECR/ADP, roster fit, QB timing and next-pick survival only refine decisions within tiers",
         "board_size": len(board),
     }
 
