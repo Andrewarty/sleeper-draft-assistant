@@ -1,0 +1,31 @@
+{
+  "updated_at": "2026-08-28",
+  "format": "12-team full PPR, 1QB baseline",
+  "philosophy": "Master board is conviction. ECR/ADP are market timing. News and injuries can move conviction when evidence is strong.",
+  "source_snapshot": [
+    "FantasyPros PPR consensus / Fantasy BR Aug 27",
+    "Yahoo Fantasy consensus and Justin Boone Aug 28",
+    "Draft Sharks PPR rankings Aug 28",
+    "Fantasy Football Calculator live QB rankings Aug 28",
+    "Fantasy Football Nerds player snapshots Aug 26-28",
+    "NFL.com injury reporting",
+    "Reuters NFL injury/news reporting",
+    "Fantasy Life preseason risers/fallers",
+    "FantasyPros player notes and platform ADP"
+  ],
+  "notable_changes": [
+    {"player":"Christian McCaffrey","direction":"UP","reason":"Fresh expert boards remain aggressive despite workload/durability risk; kept below the very top PPR core."},
+    {"player":"James Cook III","direction":"HOLD HIGH","reason":"Fresh ECR has him as an RB1 and platform ADP remains top-10-ish; one source ranking him much lower was treated as an outlier."},
+    {"player":"De'Von Achane","direction":"UP","reason":"Current PPR boards consistently price his receiving ceiling inside the late first/early second range."},
+    {"player":"Saquon Barkley","direction":"UP","reason":"Market and current ECR are materially stronger than the old board slot."},
+    {"player":"Ashton Jeanty","direction":"DOWN","reason":"Recent right-leg/ankle injury creates Week 1 uncertainty; talent remains elite enough to keep him in the early-round cluster."},
+    {"player":"Drake Maye","direction":"DOWN OVERALL / HOLD QB2","reason":"QB2 conviction is real, but in 1QB PPR his overall board rank now reflects positional replacement value instead of treating QB2 like an automatic Round 3 pick."},
+    {"player":"Breece Hall","direction":"UP","reason":"Expected back for Week 1 and at least one sharp preseason update moved him aggressively upward; committee risk prevents a full return to elite-RB pricing."},
+    {"player":"Travis Etienne Jr.","direction":"UP","reason":"New Orleans early-down role plus Alvin Kamara's expected 4-6 week absence improves early-season workload."},
+    {"player":"Jeremiyah Love","direction":"DOWN","reason":"Confirmed high-ankle sprain and uncertain Week 1 readiness; no surgery required."},
+    {"player":"Rhamondre Stevenson","direction":"UP BIG","reason":"Strong camp, lead-back reports and TreVeyon Henderson's ankle issue have pushed market ADP toward the mid-60s."},
+    {"player":"Kenneth Walker III","direction":"MONITOR","reason":"Swollen ankle is currently described as minor, so no major conviction downgrade yet."},
+    {"player":"Ja'Marr Chase","direction":"MONITOR","reason":"Knee hyperextension cost practice time, but Chase said he could have played and current reporting does not indicate a major Week 1 threat."},
+    {"player":"Malik Nabers","direction":"MONITOR","reason":"Exited practice during ACL/meniscus recovery, but coach said there was no new injury; risk remains baked into rank."}
+  ]
+}
