@@ -1,0 +1,25 @@
+{
+  "updated_at": "2026-08-29",
+  "apply_over": "master_board.csv",
+  "rank_actions": [
+    {"name":"Josh Jacobs","from_rank":42,"to_band":"48-58","status":"DOWN_RISK"},
+    {"name":"Kyler Murray","from_rank":108,"to_band":"96-105","status":"UP"},
+    {"name":"TreVeyon Henderson","from_rank":73,"to_band":"70-78","status":"HOLD_WEEK1_OK"},
+    {"name":"Ashton Jeanty","from_rank":31,"to_band":"28-35","status":"HOLD_INJURY"},
+    {"name":"Kenneth Walker III","from_rank":24,"to_band":"22-27","status":"HOLD"},
+    {"name":"Ja'Marr Chase","from_rank":1,"to_band":"1-4","status":"HOLD_ELITE"}
+  ],
+  "adds": [
+    {"name":"Mike Washington Jr.","pos":"RB","team":"LV","board_band":"100-115","tag":"TARGET","risk":"contingent on Jeanty health"},
+    {"name":"MarShawn Lloyd","pos":"RB","team":"GB","board_band":"108-122","tag":"VALUE","risk":"contingent on Jacobs availability"},
+    {"name":"Jordyn Tyson","pos":"WR","team":"NO","board_band":"118-125","tag":"WAIT","risk":"hamstring; possible short-term IR; stash only"}
+  ],
+  "draft_windows": {
+    "Josh Jacobs":"CAN WAIT / AVOID AT OLD PRICE",
+    "Kyler Murray":"TAKE late; DO NOT LET PAST TURN after 110",
+    "Mike Washington Jr.":"TAKE 9th-11th while Jeanty uncertainty persists",
+    "MarShawn Lloyd":"TAKE late as contingent upside",
+    "Jordyn Tyson":"CAN WAIT; IR/bench stash only",
+    "Ashton Jeanty":"TAKE only after meaningful injury discount"
+  }
+}
