@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-08-29",
+  "format": "12-team full PPR, 1QB baseline",
+  "rule": "Overall board breaks ties; positional tiers decide urgency. A lower overall-ranked player can become the correct pick when he is the last player in a materially stronger positional tier.",
+  "pressure_states": ["SAFE","WATCH","PRESSURE","CLIFF"],
+  "tags": ["DIAMOND","TARGET","VALUE","FAIR","WAIT","AVOID_AT_PRICE","RISK"],
+  "qb": {
+    "tier_1": ["Josh Allen","Lamar Jackson"],
+    "tier_2": ["Drake Maye","Jayden Daniels","Joe Burrow"],
+    "tier_3": ["Jalen Hurts","Justin Herbert","Trevor Lawrence","Caleb Williams"],
+    "tier_4": ["Dak Prescott","Jaxson Dart","Brock Purdy","Bo Nix","Patrick Mahomes II","Kyler Murray"]
+  },
+  "rb": {
+    "tier_1": ["Jahmyr Gibbs","Bijan Robinson"],
+    "tier_2": ["Jonathan Taylor","Christian McCaffrey","James Cook III","De'Von Achane"],
+    "tier_3": ["Chase Brown","Saquon Barkley","Kenneth Walker III","Omarion Hampton","Ashton Jeanty"],
+    "tier_4": ["Breece Hall","Kyren Williams","Travis Etienne Jr.","Javonte Williams","Jeremiyah Love","Josh Jacobs","Derrick Henry"],
+    "tier_5": ["Cam Skattebo","D'Andre Swift","David Montgomery","Quinshon Judkins","Bucky Irving","Rhamondre Stevenson","Bhayshul Tuten"],
+    "tier_6": ["TreVeyon Henderson","Jaylen Warren","Jadarian Price","Tony Pollard","Rico Dowdle","Chuba Hubbard","RJ Harvey"],
+    "tier_7": ["J.K. Dobbins","Kenny Gainwell","Kyle Monangai","Rachaad White","Blake Corum","Jordan Mason","Jacory Croskey-Merritt","Mike Washington Jr.","MarShawn Lloyd"]
+  },
+  "wr": {
+    "tier_1": ["Ja'Marr Chase","Puka Nacua","Jaxon Smith-Njigba","Amon-Ra St. Brown"],
+    "tier_2": ["Justin Jefferson","CeeDee Lamb","Drake London","A.J. Brown"],
+    "tier_3": ["Malik Nabers","Nico Collins","Chris Olave","George Pickens","Garrett Wilson","Rashee Rice"],
+    "tier_4": ["DeVonta Smith","Ladd McConkey","Tee Higgins","Tetairoa McMillan","Luther Burden III","Davante Adams","Terry McLaurin","Emeka Egbuka","Jaylen Waddle"],
+    "tier_5": ["Zay Flowers","DJ Moore","Jameson Williams","Mike Evans","Christian Watson","Parker Washington","Rome Odunze"],
+    "tier_6": ["Carnell Tate","Marvin Harrison Jr.","Brian Thomas Jr.","Chris Godwin Jr.","Michael Wilson","Courtland Sutton","Michael Pittman Jr.","Alec Pierce","Josh Downs"],
+    "tier_7": ["Wan'Dale Robinson","Stefon Diggs","DK Metcalf","Quentin Johnston","Jordan Addison","Makai Lemon","Jayden Reed","Jakobi Meyers","Xavier Worthy","KC Concepcion","Romeo Doubs","Jalen Coker","Jordyn Tyson"]
+  },
+  "te": {
+    "tier_1": ["Trey McBride","Brock Bowers"],
+    "tier_2": ["Colston Loveland"],
+    "tier_3": ["Tyler Warren","Harold Fannin Jr.","Tucker Kraft"],
+    "tier_4": ["George Kittle","Kyle Pitts Sr.","Sam LaPorta","Travis Kelce","Isaiah Likely","Dalton Kincaid","Jake Ferguson","Dallas Goedert"]
+  },
+  "material_cliffs": [
+    "RB: after Tier 4",
+    "TE: after Colston Loveland",
+    "WR: shallower urgency because Tier 4-5 remains deep",
+    "QB: late depth strengthened by Kyler Murray officially winning Minnesota job"
+  ]
+}
