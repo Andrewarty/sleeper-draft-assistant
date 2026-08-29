@@ -1,0 +1,97 @@
+{
+  "updated_at": "2026-08-29",
+  "format": "12-team full PPR, 1QB baseline",
+  "philosophy": "Master board is conviction. ECR and ADP are market/timing inputs, not automatic overrides. Positional tiers and tier cliffs drive urgency.",
+  "source_snapshot": [
+    "FantasyPros fresh Aug 29 expert consensus / Derek Brown / Andrew Erickson / Pat Fitzmaurice",
+    "Yahoo Fantasy / Justin Boone Aug 28-29 rankings and ADP movement",
+    "ESPN Aug 28-29 composite PPR rankings, depth charts, injury and preseason buzz",
+    "NFL.com and official team reporting",
+    "Reuters/AP national reporting",
+    "Fantasy Life Aug 29 late-round RB analysis",
+    "Draft Sharks Aug 28-29 injury/riser-faller updates",
+    "Rotoworld/NBC player news",
+    "Raiders official camp and preseason usage reporting"
+  ],
+  "material_board_actions": [
+    {
+      "player": "Josh Jacobs",
+      "action": "DOWN / RISK FLAG",
+      "proposed_overall_band": "48-58",
+      "reason": "Formal misdemeanor charges plus an active NFL review create suspension uncertainty; Green Bay has publicly said it expects him to remain on the roster, so this is not a talent downgrade or a confirmed suspension. Groin issue adds secondary risk.",
+      "draft_window": "CAN WAIT at old third-round price; TAKE only after a meaningful discount",
+      "confidence": "high on risk increase, medium on exact rank"
+    },
+    {
+      "player": "Kyler Murray",
+      "action": "UP",
+      "proposed_overall_band": "96-105",
+      "reason": "Minnesota officially named Murray the Week 1 starter. Kevin O'Connell scheme, Justin Jefferson/Jordan Addison/T.J. Hockenson and Murray's rushing history restore late-QB1 upside, but 1QB replacement value keeps him late.",
+      "draft_window": "TAKE as a late QB target after pick 95; DO NOT LET PAST TURN if still available around 110+",
+      "confidence": "high"
+    },
+    {
+      "player": "Mike Washington Jr.",
+      "action": "ADD / BIG RISER",
+      "proposed_overall_band": "100-115",
+      "reason": "With Ashton Jeanty sidelined, Washington took exclusive first-team work, flashed as a receiver, then started the preseason finale. Raiders reporting and Fantasy Life both identify him as the clear next-man-up.",
+      "draft_window": "TAKE in the 9th-11th if Jeanty uncertainty persists; DO NOT LET PAST TURN for Jeanty managers",
+      "confidence": "high on role, medium on short-term duration"
+    },
+    {
+      "player": "MarShawn Lloyd",
+      "action": "ADD / RISER",
+      "proposed_overall_band": "108-122",
+      "reason": "Packers are preparing for the possibility of a Josh Jacobs suspension. Lloyd has stayed healthy this summer and handled 5 of 7 snaps on the first starter drive in a recent preseason game.",
+      "draft_window": "TAKE as late contingent RB upside; stronger if drafting Jacobs",
+      "confidence": "medium-high"
+    },
+    {
+      "player": "Jordyn Tyson",
+      "action": "ADD AS IR/STASH ONLY",
+      "proposed_overall_band": "118-125",
+      "reason": "Hamstring injury is expected to cost roughly two months and short-term IR is possible. His prior camp role and draft capital preserve upside, but he is not a normal redraft target in shallow formats.",
+      "draft_window": "CAN WAIT; only draft late if bench/IR structure supports a stash",
+      "confidence": "high"
+    },
+    {
+      "player": "TreVeyon Henderson",
+      "action": "HOLD / REMOVE ACUTE WEEK-1 PANIC",
+      "proposed_overall_band": "70-78",
+      "reason": "Boston Globe reporting says Henderson should be good to go for Week 1. Rhamondre Stevenson is still expected to open as the clearer lead back, so role risk remains.",
+      "draft_window": "TAKE only at board value; do not chase the injury dip too aggressively",
+      "confidence": "high"
+    },
+    {
+      "player": "Ashton Jeanty",
+      "action": "HOLD DOWN / INJURY FLAG",
+      "proposed_overall_band": "28-35",
+      "reason": "Raiders say he is still on the mend while also saying they are counting on him for the opener. No confirmed long-term injury, but Week 1 workload remains uncertain.",
+      "draft_window": "AVOID AT PRICE in the middle of Round 2; TAKE if he falls into our late-2nd/early-3rd conviction window",
+      "confidence": "medium-high"
+    },
+    {
+      "player": "Kenneth Walker III",
+      "action": "HOLD",
+      "proposed_overall_band": "22-27",
+      "reason": "Andy Reid attributed ankle swelling to footwear and said Walker will be OK. No evidence warrants a meaningful downgrade.",
+      "draft_window": "TAKE in our normal premium-RB window",
+      "confidence": "high"
+    },
+    {
+      "player": "Ja'Marr Chase",
+      "action": "HOLD ELITE / MONITOR",
+      "proposed_overall_band": "1-4",
+      "reason": "Recent knee hyperextension remains described as minor and Chase publicly downplayed it. No credible evidence currently supports moving him out of the elite first-pick cluster.",
+      "draft_window": "TAKE anywhere in top 4",
+      "confidence": "high"
+    }
+  ],
+  "tier_notes": [
+    "RB urgency increases materially after the Jacobs/Etienne/Javonte/Love/Breece cluster; do not let market ADP alone push us past a tier cliff.",
+    "Late-RB contingent-value tier now explicitly includes Mike Washington Jr. and MarShawn Lloyd.",
+    "Kyler Murray joins the late-QB value tier and strengthens the case for waiting on QB in 1QB builds.",
+    "Jordyn Tyson is no longer treated as a normal mid-round WR; only an IR/bench stash.",
+    "No change to the elite WR/TE core from today's evidence."
+  ]
+}
