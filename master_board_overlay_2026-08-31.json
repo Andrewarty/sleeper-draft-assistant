@@ -1,0 +1,36 @@
+{
+  "updated_at": "2026-08-31",
+  "scope": "final_pre_draft_refresh",
+  "apply_over": "master_board.csv",
+  "rank_actions": [
+    {"name":"Josh Jacobs","from_rank":36,"to_band":"75-90","status":"DOWN_MATERIAL","injury_risk":"MATERIAL","reason":"NFL Commissioner Exempt List; cannot practice or play while listed; duration unknown"},
+    {"name":"MarShawn Lloyd","from_rank":null,"to_band":"58-72","status":"UP_MAJOR","injury_risk":"MONITOR","reason":"Packers kept Lloyd with Chris Brooks and acquired Kaleb Johnson while Jacobs is exempt; Lloyd has immediate path to lead work"},
+    {"name":"Kaleb Johnson","from_rank":null,"to_band":"105-125","status":"UP","injury_risk":"LOW_NOISE","reason":"Acquired by Green Bay at cutdown; contingent upside behind Lloyd while Jacobs is unavailable"},
+    {"name":"Ashton Jeanty","from_rank":33,"to_band":"28-35","status":"HOLD_DISCOUNT_ONLY","injury_risk":"MONITOR","reason":"Ankle sprain; made Raiders initial 53 and was not placed on IR/PUP, reducing multi-week absence concern but Week 1 readiness still not confirmed"},
+    {"name":"Mike Washington Jr.","from_rank":null,"to_band":"88-105","status":"UP","injury_risk":"LOW_NOISE","reason":"Raiders kept only Jeanty, Washington and Dylan Laube at RB; Washington entered camp as No. 2 and could have immediate role if Jeanty is limited"},
+    {"name":"Jordyn Tyson","from_rank":null,"to_band":"OUTSIDE_TOP_125","status":"DOWN_MATERIAL","injury_risk":"MATERIAL","reason":"Placed on IR/designated to return; must miss at least first four games"},
+    {"name":"Kenneth Walker III","from_rank":25,"to_band":"22-28","status":"HOLD","injury_risk":"MONITOR","reason":"Recent foot/ankle swelling cost practices and preseason finale, but Andy Reid indicated it was not expected to be serious; active on Chiefs 53"},
+    {"name":"TreVeyon Henderson","from_rank":73,"to_band":"68-76","status":"HOLD_SLIGHT_UP","injury_risk":"LOW_NOISE","reason":"Left a practice early after slipping, but made Patriots 53; no reserve designation"},
+    {"name":"Garrett Wilson","from_rank":29,"to_band":"29-34","status":"HOLD_HIGH_LEVERAGE","injury_risk":"LOW_NOISE","reason":"2025 knee history remains the main downside, but late-August illness resolved; elite pre-injury target/first-read shares support WR1 upside at a market discount"},
+    {"name":"Saquon Barkley","from_rank":15,"to_band":"15-18","status":"HOLD_HIGH_LEVERAGE","injury_risk":"LOW_NOISE","reason":"Active on Eagles 53 with no current designation; 2025 efficiency dip traced partly to OL health while volume remained strong; age/workload prevents pushing him above this band"},
+    {"name":"Chris Olave","from_rank":20,"to_band":"18-22","status":"UP_SLIGHT","injury_risk":"LOW_NOISE","reason":"Jordyn Tyson IR consolidates early-season targets; 2025 healthy-game target share remains strong"},
+    {"name":"Sam LaPorta","from_rank":96,"to_band":"90-100","status":"HOLD_MONITOR","injury_risk":"MONITOR","reason":"Hip issue has affected preseason readiness; current reporting still leans Week 1 but floor should stay discounted"}
+  ],
+  "draft_windows": {
+    "Josh Jacobs":"AVOID at old Round 3-4 price; only take after major fall into Round 7+ territory and only if roster can absorb zeroes",
+    "MarShawn Lloyd":"ATTACK in Rounds 6-7 if Jacobs remains exempt; do not assume uncontested bell-cow because Kaleb Johnson/Chris Brooks remain",
+    "Ashton Jeanty":"TAKE only after injury discount; active-roster status lowers worst-case risk but does not prove Week 1 full workload",
+    "Mike Washington Jr.":"TAKE in Rounds 9-11 as contingent upside; move earlier only if Jeanty gets a negative Week 1 update",
+    "Kenneth Walker III":"DO NOT panic-sell; acceptable late Round 2/early Round 3 if no new setback",
+    "Garrett Wilson":"ATTACK at market price; do not force a full round ahead of board unless WR tier is about to cliff",
+    "Saquon Barkley":"TAKE in mid/late Round 2; do not chase into early Round 1",
+    "Chris Olave":"ATTACK in the late Round 2/early Round 3 cluster",
+    "Jordyn Tyson":"IR stash only in deep benches; otherwise leave for waivers"
+  },
+  "strategy": {
+    "rb_runs":"Do not chase automatically. Chase only when the run is consuming the final backs in a board tier; otherwise harvest WR/TE value created by the room.",
+    "qb":"Josh Allen is the only QB worth considering at a true Round-3 discount; otherwise prefer the Maye/Daniels or Herbert/Lawrence value pockets and exploit late Purdy-type value.",
+    "te":"Pay only at a real tier edge. Do not force TE because of a room run if comparable target volume exists later.",
+    "injury_flags":"Treat platform Q/O/PUP/IR icons as prompts for source verification, not automatic downgrades. Commissioner Exempt and IR/PUP designations are material because they directly constrain availability."
+  }
+}
